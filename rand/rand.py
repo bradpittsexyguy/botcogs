@@ -62,7 +62,6 @@ class Rand(commands.Cog):
         await ctx.send(message)
         
         
-        
 
 
     
