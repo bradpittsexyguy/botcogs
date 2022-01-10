@@ -169,7 +169,7 @@ class Rand(commands.Cog):
         embed.set_footer(text="nice pics and shit")
         await ctx.send(embed=embed)
         
-        @commands.command(name="embeddd")
+    @commands.command(name="embeddd")
     async def socialmarcus(self, ctx: commands.Context):
         """sends embed"""
         embed= discord.Embed(title="socials", url="https://cdn.discordapp.com/attachments/912050662060195900/930173630770470962/marcus.jpg", description="marcus sexyguy", color=0x079de9)
