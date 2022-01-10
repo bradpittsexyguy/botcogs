@@ -21,7 +21,7 @@ class Rand(commands.Cog):
         await ctx.send(message)
 
     @commands.command(name="react")
-    @commands.cooldown(rate=1, per+3, type= commands.BucketType.user)
+    @commands.cooldown(rate=1, per=3, type= commands.BucketType.user)
     async def reaction(self, ctx: commands.Context, msg_id: int, emoji = None, channel: discord.TextChannel = None):
         """react to a message.\n
         msg_id is the message id you want to react to.\n
