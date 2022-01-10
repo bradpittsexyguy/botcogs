@@ -45,7 +45,7 @@ class Rand(commands.Cog):
         if text == "":
             messsage = "please use right command or say something after the command."
         else: 
-            message = text
+            message = "stepbro im stuck"
         await ctx.send(message)
         
         
