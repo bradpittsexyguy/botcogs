@@ -169,6 +169,18 @@ class Rand(commands.Cog):
         embed.set_footer(text="nice pics and shit")
         await ctx.send(embed=embed)
         
+        @commands.command(name="embeddd")
+    async def socialmarcus(self, ctx: commands.Context):
+        """sends embed"""
+        embed= discord.Embed(title="socials", url="https://cdn.discordapp.com/attachments/912050662060195900/930173630770470962/marcus.jpg", description="marcus sexyguy", color=0x079de9)
+        embed.set_author(name="marcus instagram", url="https://cdn.discordapp.com/attachments/912050662060195900/930174774250971206/marcus2.jpg", icon_url="https://cdn.discordapp.com/attachments/912050662060195900/930175152413614140/marcus3.jpg")
+        embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/912050662060195900/930176052746158120/marcus5.jpg")
+        embed.set_image(url="https://cdn.discordapp.com/attachments/912050662060195900/930175700802105445/marcus4.jpg")
+        embed.add_field(name="instagram", value="https://www.instagram.com/marcus_ash69/", inline=True)
+        embed.add_field(name="secret nudes", value="[click here](https://www.youtube.com/watch?v=0iCtC-EOzEo)", inline=True)
+        embed.set_footer(text="nice pics and shit")
+        await ctx.send(embed=embed)
+        
         
         
         
