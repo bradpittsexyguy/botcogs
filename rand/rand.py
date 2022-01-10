@@ -39,7 +39,7 @@ class Rand(commands.Cog):
             data = await request.json()
         try:
             title = data["Title"]
-            embed = dicord.Embed(title=title, color=0x8C05D2)
+            embed = discord.Embed(title=title, color=0x8C05D2)
             if data["Poster"] != "N/A":
                 embed.set_thumbnail(url=data["Poster"])
             if data["imdbID"]:
