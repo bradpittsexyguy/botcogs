@@ -60,6 +60,18 @@ class Rand(commands.Cog):
        elif a == 2:
          message = "he is so hot hes melting the Sun"
        await ctx.send(message)
+    
+    @commands.command(name="emebed")
+    async def embed(self, ctx: commands.Context):
+        """sends embed"""
+        embed= discord.Embed(title="nice cock bro", url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5MrUhHgBnfaer3Gqjd-T8inZuN3Ylli5pYQ&usqp=CAU", description="damn thats at least 2 inches", color=0x079de9)
+        embed.set_author(name="WeirdChamp", url="https://media.makeameme.org/created/nice-cock-bro-bf0ac0330e.jpg", icon_url="https://media.makeameme.org/created/nice-cock-bro-bf0ac0330e.jpg")
+        embed.set_thumbnail(url="https://media.makeameme.org/created/nice-cock-bro-bf0ac0330e.jpg")
+        embed.set_image(url="https://media.makeameme.org/created/nice-cock-bro-bf0ac0330e.jpg")
+        embed.add_field(name="nice cock generator", value="https://xngay.com/wp-content/uploads/2019/12/%F0%9F%91%85%F0%9F%91%85%F0%9F%91%853-1.jpg", inline=True)
+        embed.add_field(name="nice cock generator", value="https://media.makeameme.org/created/nice-cock-bro-bf0ac0330e.jpg", inline=True)
+        embed.set_footer(text="big ass cock")
+        await ctx.send(embed=embed)
         
         
 
