@@ -39,7 +39,7 @@ class Rand(commands.Cog):
      
     @commands.command(name="pls")
     @commands.cooldown(rate=1, per=3, type= commands.BucketType.user)
-    async def sendmessage(self, ctx: commands.Context, *, text: str = ""):
+    async def pornhub(self, ctx: commands.Context, *, text: str = ""):
         """this will send a message"""
         if text == "":
             messsage = "please use right command or say something after the command."
