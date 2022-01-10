@@ -42,7 +42,7 @@ class Rand(commands.Cog):
             embed = dicord.Embed(title=title, color=0x8C05D2)
             if data["Poster"] != "N/A":
                 embed.set_thumbnail(url=data["Poster"])
-            if data["imbdID"]:
+            if data["imdbID"]:
                 embed.url = "http://www.imbd.com/title/{}".format(data["imbdID"])
             if data["Runtime"]:
                 embed.add_field(name="Runtime", value=data["Runtime"], inline=True)
