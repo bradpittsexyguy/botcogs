@@ -154,11 +154,7 @@ class Rand(commands.Cog):
         embed.add_field(name="nice cock generator", value=f"{picture}", inline=True)
         embed.set_footer(text="big nana milkers")
         embeds.append(embed)
-        await menu(ctx, pages=embeds, controls=DEFAULT_CONTROLS, message=None, page=0, timeout=180)
         
-    @commands.command(name="embedd")
-    async def killswitchsocial(self, ctx: commands.Context):
-        """sends embed"""
         embed= discord.Embed(title="socials", url="https://cdn.discordapp.com/attachments/838858647407951942/929085440613580830/image0.png", description="killswitch socials", color=0x079de9)
         embed.set_author(name="killswitch", url="https://cdn.discordapp.com/attachments/838858647407951942/929866773937942548/Picsart_22-01-09_23-37-56-042.jpg", icon_url="https://cdn.discordapp.com/attachments/838858647407951942/929866773937942548/Picsart_22-01-09_23-37-56-042.jpg")
         embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/838858647407951942/929866773937942548/Picsart_22-01-09_23-37-56-042.jpg")
