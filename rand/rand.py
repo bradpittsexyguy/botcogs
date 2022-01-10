@@ -164,7 +164,7 @@ class Rand(commands.Cog):
         embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/838858647407951942/929866773937942548/Picsart_22-01-09_23-37-56-042.jpg")
         embed.set_image(url="https://cdn.discordapp.com/attachments/891680867053883412/930159302444994620/killswitch.jpg")
         embed.add_field(name="youtube", value="https://www.youtube.com/channel/UCbVaHBlsrR7CHZ9i9XoHKVg", inline=True)
-        embed.add_field(name="instagram", value="nstagram.com/killswitch531/", inline=True)
+        embed.add_field(name="instagram", value="https://www.instagram.com/killswitch531/", inline=True)
         embed.add_field(name="secret nudes", value="[click here](https://www.youtube.com/watch?v=0iCtC-EOzEo)", inline=True)
         embed.set_footer(text="nice pics and shit")
         await ctx.send(embed=embed)
