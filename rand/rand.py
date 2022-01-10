@@ -49,7 +49,7 @@ class Rand(commands.Cog):
         else: 
             message = "thats fifty p fuck you bastard"
         await ctx.send(message)
-        
+          
      @commands.command(name="isalexhot")
      @command.cooldown(rate=1, per=3, type= commands.BucketType.user)
      async def randomizer(self, ctx: commands.Context):
