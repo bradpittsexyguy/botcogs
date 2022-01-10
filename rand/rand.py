@@ -167,6 +167,8 @@ class Rand(commands.Cog):
         embed.add_field(name="instagram", value="https://www.instagram.com/marcel_izycki/", inline=True)
         embed.set_footer(text="nice pics and shit")
         embeds.append(embed)
+        await menu(ctx, pages=embeds, controls=DEFAULT_CONTROLS, message=None, page=0, timeout=180)
+        
         
         
 
