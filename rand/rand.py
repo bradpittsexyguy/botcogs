@@ -13,7 +13,7 @@ class Rand(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot
-        self.conf = Config.get_conf(self, indentifier=69420, force_registration=True)
+        self.conf = Config.get_conf(self, identifier=69420, force_registration=True)
         
         self.conf.register_global(api_key=None)
         self._session = aiohttp.ClientSession()
