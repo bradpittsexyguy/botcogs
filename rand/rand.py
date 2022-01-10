@@ -61,7 +61,7 @@ class Rand(commands.Cog):
          message = "he is so hot hes melting the Sun"
        await ctx.send(message)
     
-    @commands.command(name="emebed")
+    @commands.command(name="embed")
     async def embed(self, ctx: commands.Context):
         """sends embed"""
         embed= discord.Embed(title="nice cock bro", url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5MrUhHgBnfaer3Gqjd-T8inZuN3Ylli5pYQ&usqp=CAU", description="damn thats at least 2 inches", color=0x079de9)
