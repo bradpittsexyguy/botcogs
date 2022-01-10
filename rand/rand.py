@@ -76,7 +76,7 @@ class Rand(commands.Cog):
                 embed.set_footer(text=data["Website"])
             await ctx.send(embed=embed)
         except KeyError:
-            await ctx.send("we couldn't find a movie with that name.)
+            await ctx.send("we couldn't find a movie with that name.")
                            
             
                 
