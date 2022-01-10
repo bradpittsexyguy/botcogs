@@ -40,12 +40,13 @@ class Rand(commands.Cog):
     @commands.command(name="pls")
     @commands.cooldown(rate=1, per=3, type= commands.BucketType.user)
     async def sendmessage(self, ctx: commands.Context, *, text: str = ""):
-        if text == "help":
-            message = "im stuck stepbro"
+        """this will send a message"""
         if text == "":
             messsage = "please use right command or say something after the command."
+        if text == "help":
+            message = "im stuck stepbro"
         else: 
-            message = "stepbro im stuck"
+            message = "thats 50p fuck you bastard"
         await ctx.send(message)
         
         
