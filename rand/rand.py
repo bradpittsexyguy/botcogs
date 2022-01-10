@@ -38,18 +38,18 @@ class Rand(commands.Cog):
         ) as request:
             data = await request.json()
         try:
-            title = data ["Title"]
+            title = data["Title"]
             embed = dicord.Embed(title=title, color=0x8C05D2)
             if data["Poster"] != "N/A":
                 embed.set_thumbnail(url=data["Poster"])
             if data["imdbID"]:
-                embed.url = "http://www.imbd.com/title/{}".format(data["imbdID"])
+                embed.url = "http://www.imdb.com/title/{}".format(data["imdbID"])
             if data["Runtime"]:
                 embed.add_field(name="Runtime", value=data["Runtime"], inline=True)
             if data["Released"]:
                 embed.add_field(name="Release date", value=data["Released"], inline=True)
             if data["imdbRating"]:
-                embed.add_field(name="imbd Rating", value=data["imbdRating"], inline=True)
+                embed.add_field(name="imdb Rating", value=data["imdbRating"], inline=True)
             if data["Rated"]:
                 embed.add_field(name="age Rating", value=data["Rated"], inline=True)
             if data["Plot"]:
@@ -61,15 +61,15 @@ class Rand(commands.Cog):
             if data["Actors"]:
                 embed.add_field(name="Actors", value=data["Actors"], inline=True)
             if data["BoxOffice"]:
-                embed.add_field(name="Box Office ", value=data["BoxOffice"], inline=True)
+                embed.add_field(name="Box Office", value=data["BoxOffice"], inline=True)
             if data["Production"]:
                 embed.add_field(name="Production", value=data["Production"], inline=True)
             if data["Language"]:
                 embed.add_field(name="Language", value=data["Language"], inline=True)
             if data["Country"]:
                 embed.add_field(name="Country", value=data["Country"], inline=True)
-            if data["Writers"]:
-                embed.add_field(name="Writers", value=data["Writers"], inline=False)
+            if data["Writer"]:
+                embed.add_field(name="Writers", value=data["Writer"], inline=False)
             if data["Awards"]:
                 embed.add_field(name="Awards", value=data["Awards"], inline=False)
             if data["Website"]:
