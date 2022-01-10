@@ -51,7 +51,7 @@ class Rand(commands.Cog):
         await ctx.send(message)
           
     @commands.command(name="isalexhot")
-    @command.cooldown(rate=1, per=3, type= commands.BucketType.user)
+    @commands.cooldown(rate=1, per=3, type= commands.BucketType.user)
     async def randomizer(self, ctx: commands.Context):
        """this command sends a message"""
        a = random.randint(1, 2)
