@@ -37,7 +37,7 @@ class Rand(commands.Cog):
         except discord.HTTPException:
             await ctx.send("that message id isn't in this channel please specify the channel the message is in or use the correct message id.")
             
-   @commands.command(name= "hello")
+   @commands.command(name="hello") 
    @commands.cooldown(rate=1, per=3, type= commands.BucketType.user)
    async def sendmessage(self, ctx: commands.Context, *, text: str = ""):
     """this command sends a message"""
