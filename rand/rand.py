@@ -36,6 +36,17 @@ class Rand(commands.Cog):
             await msg.add_reaction(emoji)
         except discord.HTTPException:
             await ctx.send("that message id isn't in this channel please specify the channel the message is in or use the correct message id.")
+            
+   @commands.command(name="helpp")
+   @commands.cooldown(rate=1, per=3, type= commands.BucketType.user)
+   async def sendmessage(self, ctx: commands.context, *, text: str = ""):
+    """this command sends a message"""
+    if text == "":
+        message = "you used a p too much you dumb fuck."
+    else:
+        message = "still a p too much and a extra letter you idiot."
+    await: ctx.send(message)
+
 
     
     
