@@ -38,7 +38,7 @@ class Rand(commands.Cog):
             await ctx.send("that message id isn't in this channel please specify the channel the message is in or use the correct message id.")
      
     @commands.command(name="pls")
-    @commands.cooldow(rate=1, per=3, type= commands.BucketType.user)
+    @commands.cooldown(rate=1, per=3, type= commands.BucketType.user)
     async def sendmessage(self, ctx: commands.Context, *, text: str = ""):
         if text == "help":
             message = "im stuck stepbro"
