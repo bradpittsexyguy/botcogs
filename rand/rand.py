@@ -46,7 +46,7 @@ class Rand(commands.Cog):
         elif text == "help":
             message = "im stuck stepbro"
         else: 
-            message = "thats 50p fuck you bastard"
+            message = "thats fifty p fuck you bastard"
         await ctx.send(message)
         
         
