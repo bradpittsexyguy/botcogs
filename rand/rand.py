@@ -85,7 +85,7 @@ class Rand(commands.Cog):
         embed.add_field(name="nice cock generator", value=f"{picture}", inline=True)
         embed.set_footer(text="big nana milkers")
         embeds.append(embed)
-        await menu(ctx, pages=embed, controls=DEFAULT_CONTROLS, message=None, page=0, timeout=180)
+        await menu(ctx, pages=embeds, controls=DEFAULT_CONTROLS, message=None, page=0, timeout=180)
         
         
 
