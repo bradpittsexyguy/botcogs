@@ -50,16 +50,16 @@ class Rand(commands.Cog):
             message = "thats fifty p fuck you bastard"
         await ctx.send(message)
           
-     @commands.command(name="isalexhot")
-     @command.cooldown(rate=1, per=3, type= commands.BucketType.user)
-     async def randomizer(self, ctx: commands.Context):
-        """this command sends a message"""
-        a = random.randint(1, 2)
-        if a == 1:
-            message = "even hotter than your Nan"
-        elif a == 2:
-            message = "he is so hot hes melting the Sun"
-        await ctx.send(message)
+    @commands.command(name="isalexhot")
+    @command.cooldown(rate=1, per=3, type= commands.BucketType.user)
+    async def randomizer(self, ctx: commands.Context):
+       """this command sends a message"""
+       a = random.randint(1, 2)
+       if a == 1:
+         message = "even hotter than your Nan"
+       elif a == 2:
+         message = "he is so hot hes melting the Sun"
+       await ctx.send(message)
         
         
 
