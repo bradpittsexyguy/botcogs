@@ -156,7 +156,7 @@ class Rand(commands.Cog):
         embeds.append(embed)
         await menu(ctx, pages=embeds, controls=DEFAULT_CONTROLS, message=None, page=0, timeout=180)
         
-    @commands.command(name"embedd")
+    @commands.command(name="embedd")
     async def social(self, ctx: commands.Context):
         """sends embed"""
         embed= discord.Embed(title="socials", url="https://cdn.discordapp.com/attachments/838858647407951942/929085440613580830/image0.png", description="killswitch socials", color=0x079de9)
