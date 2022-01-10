@@ -42,7 +42,7 @@ class Rand(commands.Cog):
     async def pornhub(self, ctx: commands.Context, *, text: str = ""):
         """this will send a message"""
         if text == "":
-            messsage = "please use right command or say something after the command."
+            message = "please use right command or say something after the command."
         elif text == "help":
             message = "im stuck stepbro"
         else: 
