@@ -1,7 +1,8 @@
 import discord
 import asyncio
 import random
-from redbot.core import commands, checks
+import aiohttp
+from redbot.core import commands, checks, Config
 from redbot.core.utils.menus import menu, DEFAULT_CONTROLS
 from redbot.core.utils.chat_formatting import pagify
 
@@ -12,6 +13,70 @@ class Rand(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot
+        self.conf = Config.get_conf(self, indentifier=69420, force_registration=True)
+        
+        self.conf.register_global(api_key=None)
+        self._session = aiohttp.ClientSession()
+        
+    def cog_unload(self):
+        self.bot.loop.create_task(self._session.close())
+        
+    @commands.command()
+    @checks.is_owner()
+    async def imdbapi(self, ctx, api_key):
+        """some random shit"""
+        await self.conf.api_key.set(api_key)
+        await ctx.send("the api key has been set")
+        
+    @commands.command()
+    async def movie(self, ctx, *, search):
+        """search movies"""
+        api_key = await self.conf.api_key()
+        search = search.replace(" ", "+")
+        async with self._session.get(
+                f"http://www.omdbapi.com/?api_key={api_key}&t={search}"
+        ) as request:
+            data = await request.json()
+        try:
+            title = data ["Title"]
+            embed = dicord.Embed(title=title, color=0x8C05D2)
+            if data["Poster"] != "N/A":
+                embed.set_thumbnail(url=data["Poster"])
+            if data["imbdID"]:
+                embed.url = "http://www.imbd.com/title/{}".format(data["imbdID"])
+            if data["Runtime"]:
+                embed.add_field(name="Runtime", value=data["Runtime"], inline=True)
+            if data["Released"]:
+                embed.add_field(name="Release date", value=data["Released"], inline=True)
+            if data["imdbRating"]:
+                embed.add_field(name="imbd Rating", value=data["imbdRating"], inline=True)
+            if data["Rated"]:
+                embed.add_field(name="age Rating", value=data["Rated"], inline=True)
+            if data["Plot"]:
+                embed.add_field(name="Plot", value=data["Plot"], inline=False)
+            if data["Genre"]:
+                embed.add_field(name="Genre", value=data["Genre"], inline=True)
+            if data["Director"]:
+                embed.add_field(name="Director", value=data["Director"], inline=True)
+            if data["Actors"]:
+                embed.add_field(name="Actors", value=data["Actors"], inline=True)
+            if data["BoxOffice"]:
+                embed.add_field(name="Box Office ", value=data["BoxOffice"], inline=True)
+            if data["Production"]:
+                embed.add_field(name="Production", value=data["Production"], inline=True)
+            if data["Language"]:
+                embed.add_field(name="Language", value=data["Language"], inline=True)
+            if data["Country"]:
+                embed.add_field(name="Country", value=data["Country"], inline=True)
+            if data["Writers"]:
+                embed.add_field(name="Writers", value=data["Writers"], inline=False)
+            if data["Awards"]:
+                embed.add_field(name="Awards", value=data["Awards"], inline=False)
+            if data["Website"]:
+                embed.set_footer(text=data["Website"])
+            await ctx.send(embed=embed)
+                
+        
 
     @commands.command()
     @commands.cooldown(rate=1, per=3, type= commands.BucketType.user)
