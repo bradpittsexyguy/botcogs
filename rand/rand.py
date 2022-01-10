@@ -36,6 +36,20 @@ class Rand(commands.Cog):
             await msg.add_reaction(emoji)
         except discord.HTTPException:
             await ctx.send("that message id isn't in this channel please specify the channel the message is in or use the correct message id.")
+     
+    @commands.command(name="pls")
+    @commands.cooldow(rate=1, per=3, type= commands.BucketType.user)
+    async def sendmessage(self, ctx: commands.Context, *, text: str = ""):
+        if text == "help":
+            message = "im stuck stepbro"
+        if text == "":
+            messsage = "please use right command or say something after the command."
+        else: 
+            message = text
+        await ctx.send(message)
+        
+        
+        
 
 
     
