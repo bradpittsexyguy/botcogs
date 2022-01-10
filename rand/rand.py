@@ -45,7 +45,7 @@ class Rand(commands.Cog):
         message = "you used a p too much you dumb fuck."
     else:
         message = "still a p too much and a extra letter you idiot."
-    await: ctx.send(message)
+    await ctx.send(message)
 
 
     
