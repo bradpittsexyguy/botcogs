@@ -43,7 +43,7 @@ class Rand(commands.Cog):
         """this will send a message"""
         if text == "":
             messsage = "please use right command or say something after the command."
-        if text == "help":
+        elif text == "help":
             message = "im stuck stepbro"
         else: 
             message = "thats 50p fuck you bastard"
