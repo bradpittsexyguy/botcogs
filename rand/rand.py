@@ -198,7 +198,7 @@ class Rand(commands.Cog):
             message:"5. you got lucky this time"
         elif a == 6:
             message:"6. take 2 shots"
-        await ctx.send()
+        await ctx.send(number)
         
                 
         
