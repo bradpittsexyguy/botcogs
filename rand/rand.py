@@ -181,6 +181,29 @@ class Rand(commands.Cog):
         embed.set_footer(text="nice pics and shit")
         await ctx.send(embed=embed)
         
+    @commands.command(name="num")
+    @commands.cooldown(rate=1, per=3, type= commands.BucketType.user)
+    async def randomnumbergenerator(self, ctx: commands.Context):
+        """generates a random number"""
+        a = random.randint(1, 2, 3, 4, 5, 6)
+        if a == 1:
+            msg:"1. take a sip"
+        elif a == 2:
+            msg:"2. refil take a drink of your choice"
+        elif a == 3:
+            msg:"3. take a shot"
+        elif a == 4:
+            msg:"4. bottoms up finish your drink at once"
+        elif a == 5:
+            msg:"5. you got lucky this time"
+        elif a == 6:
+            msg:"6. take 2 shots"
+        await ctx.send(message)
+        
+                
+        
+                                    
+        
         
         
         
