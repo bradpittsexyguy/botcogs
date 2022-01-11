@@ -187,17 +187,17 @@ class Rand(commands.Cog):
         """this command sends a message"""
         a = random.randint(1, 6)
         if a == 1:
-            message:"1. take a sip"
+            message="1. take a sip"
         if a == 2:
-            message:"2. refil take a drink of your choice"
+            message="2. refil take a drink of your choice"
         if a == 3:
-            message:"3. take a shot"
+            message="3. take a shot"
         if a == 4:
-            message:"4. bottoms up finish your drink at once"
+            message="4. bottoms up finish your drink at once"
         if a == 5:
-            message:"5. you got lucky this time"
+            message="5. you got lucky this time"
         if a == 6:
-            message:"6. take 2 shots"
+            message="6. take 2 shots"
         await ctx.send(message)
         
                 
