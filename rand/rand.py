@@ -185,7 +185,7 @@ class Rand(commands.Cog):
     @commands.cooldown(rate=1, per=3, type= commands.BucketType.user)
     async def randomnumbergenerator(self, ctx: commands.Context):
         """generates a random number"""
-        a = random.randint(1, 2, 3, 4, 5, 6)
+        a = random.randint(1, 6)
         if a == 1:
             msg:"1. take a sip"
         elif a == 2:
