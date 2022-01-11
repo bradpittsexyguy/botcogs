@@ -200,15 +200,15 @@ class Rand(commands.Cog):
             message="6. take 2 shots"
         await ctx.send(message)
         
-                
+    @commands.command(name="spl")
+    @commands.cooldown(rate=1, per=3, type= commands.BucketType.user)
+    async def spotifyplaylist(self, ctx: commands.Context):
+        """this command sends a message"""
+        if text == "xnightwulf":
+            message="https://open.spotify.com/user/vuvmbfeq02uv3ks8lo0tinnck?si=e45ecd0eb3184968"
+        if text == "kai":
+            message="https://open.spotify.com/user/pyroteam073?si=0c8a1f7df63249ac"
+        if text == "jari":
+            message="https://open.spotify.com/user/jaribelt?si=2d6d6e13307a404b"
+        await ctx.send(message)
         
-                                    
-        
-        
-        
-        
-        
-
-
-    
-    
