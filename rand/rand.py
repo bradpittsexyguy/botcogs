@@ -202,7 +202,7 @@ class Rand(commands.Cog):
         
     @commands.command(name="spl")
     @commands.cooldown(rate=1, per=3, type= commands.BucketType.user)
-    async def spotifyplaylist(self, ctx: commands.Context):
+    async def spotifyplaylist(self, ctx: commands.Context, text: str = ""):
         """this command sends a message"""
         if text == "xnightwulf":
             message="https://open.spotify.com/user/vuvmbfeq02uv3ks8lo0tinnck?si=e45ecd0eb3184968"
