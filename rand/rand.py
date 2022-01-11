@@ -180,11 +180,12 @@ class Rand(commands.Cog):
         embed.add_field(name="secret nudes", value="[click here](https://www.youtube.com/watch?v=0iCtC-EOzEo)", inline=True)
         embed.set_footer(text="nice pics and shit")
         await ctx.send(embed=embed)
-        
+          
     @commands.command(name="num")
     @commands.cooldown(rate=1, per=3, type= commands.BucketType.user)
     async def randomnumbergenerator(self, ctx: commands.Context):
         """this command sends a message"""
+        message = text
         a = random.randint(1, 6)
         if a == 1:
             message:"1. take a sip"
