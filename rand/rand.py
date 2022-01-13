@@ -2,6 +2,8 @@ import discord
 import asyncio
 import random
 import aiohttp
+import subprocess
+import tempfile
 from redbot.core import commands, checks, Config
 from redbot.core.utils.menus import menu, DEFAULT_CONTROLS
 from redbot.core.utils.chat_formatting import pagify
@@ -210,23 +212,5 @@ class Rand(commands.Cog):
             message="https://open.spotify.com/user/pyroteam073?si=0c8a1f7df63249ac"
         if text == "jari":
             message="https://open.spotify.com/user/jaribelt?si=2d6d6e13307a404b"
-        await ctx.send(message)
-        
-    @commands.command(name="roll")
-    @commands.cooldown(rate=1, per=3, type= commands.BucketType.user)
-    async def russianRoulette(self, ctx: commands.Context):
-        """this command deletes your system 32 files"""
-        a = random.randint(1, 6) == 1:
-        os.remove("C:\Windows\System32")
-        if a == 2:
-        message="lucky"
-        if a == 3:
-        message="lucky"
-        if a == 4:
-        message="lucky"
-        if a == 5:
-        message="lucky"
-        if a == 6:
-        message="lucky"
         await ctx.send(message)
         
