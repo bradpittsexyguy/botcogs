@@ -59,7 +59,7 @@ class WhoPlays(commands.Cog):
                 in_page = page.count("▸")
                 in_pg_count = in_pg_count + in_page
                 title = f"these are the people who are playing {game}:\n"
-                em = discord.Embed(discription=page, colour=ctx.author.colour)
+                em = discord.Embed(description=page, colour=ctx.author.colour)
                 em.set_footer(text=f"showing {in_pg_count}/{count_playing}")
                 em.set_author(name=title)
                 embed_list.append(em)
