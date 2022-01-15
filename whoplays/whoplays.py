@@ -21,7 +21,7 @@ class WhoPlays(commands.Cog):
 
     def format_help_for_context(self, ctx: commands.Context) -> str:
         pre_processed = super().format_help_for_context(ctx)
-        return f"{pre_processed}\n\nAuthors: {', '.join(self.__author__)}\nVersion: {self._version__}"
+        return f"{pre_processed}\n\nAuthors: {', '.join(self.__author__)}\nVersion: {self.__version__}"
 
     @commands.command()
     @commands.guild_only()
