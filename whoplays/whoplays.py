@@ -62,6 +62,7 @@ class WhoPlays(commands.Cog):
                 em = discord.Embed(discription=page, colour=ctx.author.colour)
                 em.set_footer(text=f"showing {in_pg_count}/{count_playing}")
                 em.set_author(name=title)
+                embed_list.append(em)
 
             if len(embed_list) == 1:
                 return await ctx.send(embed=em)
