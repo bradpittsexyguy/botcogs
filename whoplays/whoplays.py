@@ -68,6 +68,38 @@ class WhoPlays(commands.Cog):
                 return await ctx.send(embed=em)
             await menu(ctx, embed_list, DEFAULT_CONTROLS)
             
+    @commands.command()
+    @commands.guild.only()
+    async def topgames(self, ctx: commands.Context):
+        """this shows the top games"""
+        freq_list = {}
+        for member in ctx.guild.members:
+            if not member:
+                continue
+            if not member.activity or not member.activity.name:
+                continue
+            if member.bot:
+                continue
+            if activity := discord.utils.get(member.activities, type= discord.ActivityType.playing):
+                if activity.name not in freq_list:
+                    freq_list[activity.name] = 0
+                freq_list[activity.name] += 1
+        sorted_list = sorted(freq_list.items(), key=operator.itemgetter(1), reverse=True)
+
+        if not freq_list:
+            await ctx.send("no one is playing anything.")
+        else:
+            msg = ""
+            max_games = min(len(sorted_list), 10)
+            for i in range(max_games):
+                game, freq = sorted_list[i]
+                msg += "▸ {}: __{}__\n".format(game, freq_list[game]
+
+            em = discord.Embed(description=msg, colour=ctx.author.colour)
+            em.set._author(name="these are the servers top played games.")
+            await ctx.send(embed=em)
+                    
+            
             
             
            
