@@ -25,7 +25,7 @@ class WhoPlays(commands.Cog):
 
     @commands.command()
     @commands.guild_only()
-    async def whoplays(self, ctx: command.Context, *, game: str):
+    async def whoplays(self, ctx: commands.Context, *, game: str):
         """shows who plays what"""
         if len(game) <= 2:
             await ctx.send("you need atleast 3 characters.")
