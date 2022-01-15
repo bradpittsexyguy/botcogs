@@ -69,7 +69,7 @@ class WhoPlays(commands.Cog):
             await menu(ctx, embed_list, DEFAULT_CONTROLS)
             
     @commands.command()
-    @commands.guild.only()
+    @commands.guild_only()
     async def topgames(self, ctx: commands.Context):
         """this shows the top games"""
         freq_list = {}
