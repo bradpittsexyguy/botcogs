@@ -93,7 +93,7 @@ class WhoPlays(commands.Cog):
             max_games = min(len(sorted_list), 10)
             for i in range(max_games):
                 game, freq = sorted_list[i]
-                msg += "▸ {}: __{}__\n".format(game, freq_list[game]
+                msg += "▸ {}: __{}__\n".format(game, freq_list[game])
 
             em = discord.Embed(description=msg, colour=ctx.author.colour)
             em.set._author(name="these are the servers top played games.")
