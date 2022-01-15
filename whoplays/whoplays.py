@@ -96,7 +96,7 @@ class WhoPlays(commands.Cog):
                 msg += "▸ {}: __{}__\n".format(game, freq_list[game])
 
             em = discord.Embed(description=msg, colour=ctx.author.colour)
-            em.set._author(name="these are the servers top played games.")
+            em.set_author(name="these are the servers top played games.")
             await ctx.send(embed=em)
                     
             
